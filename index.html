@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Udaya Sai Lingeswari Chinchinada | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#081b29;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+  
+    
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(20, 4, 4, 0.7);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    padding:10px 8px ;
+}
+
+.logo{
+    font-size:10px;
+    font-weight:700;
+    color:#a855f7;
+    
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:3px;    
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:5px;
+}
+
+nav ul li a:hover{
+    color:#a855f7;
+}
+
+/* HERO (MAIN FIX 🔥) */
+
+
+.hero-image img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #a855f7;
+    margin-bottom:5px;
+    transition:0.3s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 100px #a855f7;
+}
+
+.hero-text h3{
+    font-size:22px;
+}
+
+.hero-text h1{
+    font-size:32px;
+    margin:10px 0;
+}
+
+.hero-text h2{
+    font-size:26px;
+    color:#a855f7;
+    margin-bottom:10px;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:1.6;
+    color:#d1d5db;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:15px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    border:3px solid #a855f7;
+    border-radius:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#a855f7;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#a855f7;
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* BUTTON */
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+    padding:12px 18px;
+    background:#a855f7;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+    font-weight:60;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+
+/* SECTIONS */
+section{
+    padding:50px  10%;
+}
+
+.heading{
+    text-align:center;
+    font-size:42px;
+    color:#a855f7;
+    margin-bottom:40px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover,
+.card:active{
+    border:2px solid #d1d5db;
+    box-shadow:0 0 10px #a855f7,
+               0 0 20px #fff,
+               0 0 30px #a855f7;
+}
+.card p{
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* ================= SKILLS (GREEN FIX) ================= */
+
+progress{
+    width:100%;
+    height:10px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* Chrome/Safari */
+progress::-webkit-progress-bar{
+    background:#1f2937;
+    border-radius:10px;
+}
+
+progress::-webkit-progress-value{
+    background:#22c55e;   /* GREEN */
+    border-radius:10px;
+}
+
+/* Firefox */
+progress::-moz-progress-bar{
+    background:#22c55e;   /* GREEN */
+}
+
+/* SKILLS LIST */
+
+
+.skills-list{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+    max-width:360px;
+    margin:0 auto;
+}
+
+.skills-list li{
+    list-style:none;
+    padding:15px;
+    text-align:center;
+    border:3px solid blueviolet;
+    border-radius:15px;
+    background:rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.skills-list li:hover{
+    background:#a855f7;
+    transform:translateY(-5px);
+}
+
+/* CERTIFICATES */
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.cert{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.cert:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #a855f7;
+}
+
+/* CONTACT */
+.contact-box{
+    text-align:center;
+}
+
+.contact-box p{
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    text-align:center;
+    padding:20px;
+    border-top:2px solid #a855f7;
+    font-size:10px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:768px){
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+       
+    }
+
+    .hero-text{
+        text-align: center;
+        margin-top:10px;
+    }
+}
+    
+    .hero-image{
+        flex:0 0 120px;
+        margin-bottom:5px ;
+    }
+
+    .hero-image img{
+        width:250px;
+        height:250px;
+        object-fit:cover;
+        border-radius:50%;
+    }
+
+    .hero-text{
+        flex:1;
+        text-align:left;
+        
+    }
+
+    .hero-text h1{
+        font-size:24px;
+        line-height:1.7;
+    }
+
+    .hero-text h2{
+        font-size:26px;
+    }
+
+    .hero-text h3{
+        font-size:22px;
+    }
+
+    .hero-text p{
+        font-size:24px;
+        line-height:1.5;
+    }
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-top:60px; 
+}
+
+.hero-text{
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+.btn{
+    margin:20px auto 0;
+}
+nav ul li a.active{
+    color:#a855f7;
+    text-shadow:0 0 10px #a855f7;
+    font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Chinchinada Udaya Sai Lingeswari</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div class="hero-image">
+        <img src="profile.jpeg" alt="Profile Photo">
+    </div>
+    <div class="hero-text">
+        <h3>Hello, It's Me 👋</h3>
+        <h1>Udaya Sai Lingeswari Chinchinada</h1>
+        <h2 id="typing"></h2>
+        <p>
+            Motivated Computer Science student passionate about technology, web development, Canva designing, video editing, and continuous learning.
+        </p>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/udayasailingeswari" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/udaya_412?igsh=bzYzNGprenFjdmZy">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:chinchinadaudayasai@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <a href="Resume.pdf" download class="btn">
+            <i class="fas fa-download"></i> Download Resume
+        </a>
+    </div>
+</section>
+<!-- ABOUT -->
+
+<section id="about">
+
+<h1 class="heading">About Me</h1>
+
+<div class="card">
+
+<p>
+Hello! I'm Udaya Sai Lingeswari Chinchinada, a passionate Computer Science student with a strong interest in technology, creativity, and continuous learning.
+
+My academic background in Computer Science has helped me build a solid foundation in problem-solving, computer applications, and modern technology.
+
+Alongside my studies, I have developed practical skills in MS Office, Canva Design, and Video Editing, which allow me to create professional and engaging digital content.
+
+I am always eager to learn new concepts, take on challenges, and improve my abilities. My goal is to build a successful career where I can combine technical knowledge, creativity, and dedication to make a meaningful impact.
+
+I believe that hard work, adaptability, and a positive mindset are the keys to achieving long-term success.
+</p>
+
+</div>
+</section>
+
+<section id="skills">
+
+<h1 class="heading">Skills</h1>
+
+<div class="card">
+
+<p>HTML - 100%</p>
+<progress value="100" max="100"></progress>
+
+<p>CSS - 90%</p>
+<progress value="90" max="100"></progress>
+
+<p>JavaScript - 75%</p>
+<progress value="75" max="100"></progress>
+
+<p>Canva - 95%</p>
+<progress value="95" max="100"></progress>
+
+<p>MS Office - 100%</p>
+<progress value="100" max="100"></progress>
+
+</div>
+</section>
+
+
+<section class="skills-section">
+
+  <h1 class="heading">Soft Skills</h1>
+
+    <ul class="skills-list">
+
+        <li>🗣️ Communication Skills</li>
+
+        <li>🤝 Teamwork</li>
+
+        <li>⏰ Time Management</li>
+
+        <li>🧠 Problem Solving</li>
+
+        <li>💡 Creativity</li>
+
+        <li>🔄 Adaptability</li>
+
+        <li>📚 Quick Learning</li>
+
+        <li>🎯 Leadership</li>
+
+        <li>😊 Positive Attitude</li>
+
+        <li>📋 Organizational Skills</li>
+
+    </ul>
+
+</section>
+
+
+<section id="projects">
+
+<h1 class="heading">Projects</h1>
+
+<div class="cert-grid">
+
+<div class="cert">
+Community Service Project
+</div>
+
+<div class="cert">
+Portfolio Website
+</div>
+
+<div class="cert">
+Canva Design Projects
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+
+<h1 class="heading">Certificates</h1>
+
+<div class="cert-grid">
+
+<div class="cert">AI & ML Certification</div>
+
+<div class="cert">MS Office Certification</div>
+
+<div class="cert">Poster Presentation Certificate</div>
+
+<div class="cert"> Cisco Networking Academy - C Essentials 1</div>
+
+<div class="cert"> Cisco Networking Academy - C Essentials 2</div>
+
+<div class="cert"> Artificial Intelligence & Machine Learning Certification</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h1 class="heading">Contact</h1>
+
+<div class="card contact-box">
+
+<p>📧 chinchinadaudayasai@gmail.com</p>
+
+<p>📱 9491994398</p>
+
+<p>📍 Bhimavaram, Andhra Pradesh</p>
+
+<p>🔗 linkedin.com/in/udayasailingeswari</p>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>Designed & Developed by
+Udaya Sai Lingeswari Chinchinada 💜
+</p></footer>
+
+
+<script>
+
+const text = "Computer Science Student";
+const typing = document.getElementById("typing");
+
+let i = 0;
+
+function typeWriter(){
+if(i < text.length){
+typing.innerHTML += text.charAt(i);
+i++;
+setTimeout(typeWriter,100);
+}
+}
+
+typeWriter();
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
